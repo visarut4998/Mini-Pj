@@ -32,16 +32,16 @@ class DetailsAlbum extends Component {
     renderAlbum = () => {
         const {album} = this.state;
         return (
-            <div className="col-mb-12 mb-3">
-                <div className="card border-danger">
-                    <img src={album.cover_big} alt="" className="card-img-top"  height ="1000"/>
+            <div className="col-md-12 mb-3">
+                <div className="card border-info">
+                    <img src={album.cover_big} alt="" className="card-img-top" />
                     <div className="card-body">
                         <span className="text-primary">{album.release_date}</span>
                         <div className="card-title">
                             {album.title}
                         </div>
                     </div>
-                    <div className ="card-footer">
+                    <div className ="card-footer-center">
                         {this.renderTracks()}
                     </div>
                 </div>

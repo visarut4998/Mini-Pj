@@ -52,19 +52,19 @@ class Home extends Component {
         const { albums } = this.state;
         return albums && albums.length ?
             albums.map((item, index) => (
-                <div key={index} className="col-mb-4 mb-2">
-                    <div className="card border-danger">
-                        <img src={item.album.cover_big} alt="" className="card-img-top"  />
+                <div key={index} className="col-md-4 mb-3">
+                    <div className="card border-info">
+                        <img src={item.album.cover_big} alt="" className="card-img-top"   />
                         <div className="card-body">
-                            <span className="text-primary">{item.artist.name}</span>
+                            <span className="text-primary">Artist : {item.artist.name}</span>
                             <div className="card-title">
-                                {item.title}
+                                Album : {item.title}
                             </div>
                         </div>
                         <div className="card-footer">
                             <div className="links">
-                                <Link to={`/details/${item.album.id}`} className='link'><i className="fas fa-info text-danger"></i></Link>
-                                <a onClick = {() => this.addToFavorites(item)} className='link'><i className="fas fa-star text-danger"></i></a>
+                                <Link to={`/details/${item.album.id}`} className='link'><i className="fas fa-play text-info"></i></Link>
+                                <a onClick = {() => this.addToFavorites(item)} className='link'><i className="fas fa-star text-info"></i></a>
 
                             </div>
                         </div>
